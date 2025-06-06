@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Curry House - Authentic Thai in Nuremberg</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .carousel { transition: all 0.5s; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-black/60 fixed w-full z-20 top-0 left-0 shadow-lg backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+      <a href="#home" class="flex items-center gap-4 select-none focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2" aria-label="Red Curry House">
+        <svg class="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="28" fill="#E52B15"/>
+          <path d="M21,41 Q18,38 19,34 Q16,29 22,27 Q26,20 33,23 Q38,16 46,21 Q52,29 49,36 Q53,44 41,43 Q36,49 29,44 Q26,49 21,41Z" fill="white" opacity="0.92"/>
+          <ellipse cx="43" cy="38" rx="4" ry="1.8" fill="#fff1" stroke="#fff7" stroke-width="0.5"/>
+          <ellipse cx="46" cy="32" rx="2.5" ry="1.1" fill="#fff2" stroke="#fff7" stroke-width="0.5"/>
+          <ellipse cx="40" cy="28" rx="2" ry="1" fill="#fff2" stroke="#fff7" stroke-width="0.5"/>
+          <polygon points="27,18 28,20.2 30.5,20.4 28.5,21.9 29.2,24.2 27,22.9 24.8,24.2 25.5,21.9 23.5,20.4 26,20.2" fill="#fff9"/>
+        </svg>
+        <span class="text-[#E52B15] text-xl sm:text-2xl font-semibold tracking-tight leading-tight">RedCurryHouse</span>
+      </a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#home" class="text-white hover:text-yellow-300 font-medium">Home</a>
+        <a href="#about" class="text-white hover:text-yellow-300 font-medium">About Us</a>
+        <a href="#menu" class="text-white hover:text-yellow-300 font-medium">Menu</a>
+        <a href="#visit" class="text-white hover:text-yellow-300 font-medium">Visit Us</a>
+      </div>
+      <!-- Hamburger for Mobile -->
+      <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none focus:ring-2 focus:ring-red-600 rounded" aria-label="Open Menu">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="md:hidden hidden bg-black/90 backdrop-blur w-full">
+      <div class="flex flex-col items-center py-4 space-y-2">
+        <a href="#home" class="text-white hover:text-yellow-300 font-medium block">Home</a>
+        <a href="#about" class="text-white hover:text-yellow-300 font-medium block">About Us</a>
+        <a href="#menu" class="text-white hover:text-yellow-300 font-medium block">Menu</a>
+        <a href="#visit" class="text-white hover:text-yellow-300 font-medium block">Visit Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-[550px] flex items-center justify-center" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1500&q=80'); background-size:cover; background-position:center; margin-top:64px;">
+    <div class="absolute inset-0 bg-red-900 bg-opacity-60"></div>
+    <div class="relative z-10 text-center text-white max-w-2xl mx-auto px-4">
+      <div class="flex items-center gap-4 justify-center mb-4">
+        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="28" fill="#E52B15"/>
+          <path d="M21,41 Q18,38 19,34 Q16,29 22,27 Q26,20 33,23 Q38,16 46,21 Q52,29 49,36 Q53,44 41,43 Q36,49 29,44 Q26,49 21,41Z" fill="white" opacity="0.92"/>
+          <ellipse cx="43" cy="38" rx="4" ry="1.8" fill="#fff1" stroke="#fff7" stroke-width="0.5"/>
+          <ellipse cx="46" cy="32" rx="2.5" ry="1.1" fill="#fff2" stroke="#fff7" stroke-width="0.5"/>
+          <ellipse cx="40" cy="28" rx="2" ry="1" fill="#fff2" stroke="#fff7" stroke-width="0.5"/>
+          <polygon points="27,18 28,20.2 30.5,20.4 28.5,21.9 29.2,24.2 27,22.9 24.8,24.2 25.5,21.9 23.5,20.4 26,20.2" fill="#fff9"/>
+        </svg>
+        <span class="text-[#E52B15] text-2xl sm:text-3xl font-semibold tracking-tight leading-tight">RedCurryHouse</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-2">Welcome to Red Curry House</h1>
+      <h2 class="text-2xl font-bold mb-3">Authentic Thai Flavors in the Heart of Nuremberg</h2>
+      <p class="text-lg mb-1">Fresh Ingredients · Warm Hospitality · Unforgettable Taste</p>
+    </div>
+  </section>
+
+  <!-- Menu Section (unchanged) -->
+  <section id="menu" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-red-700 mb-10">Our Menu</h2>
+      <div class="grid sm:grid-cols-2 gap-8">
+        <!-- Menu items... (same as before) -->
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Pad Thai">
+          <div>
+            <div class="font-bold text-red-900">Pad Thai</div>
+            <div class="text-gray-700">€11.50</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Tom Yum Soup">
+          <div>
+            <div class="font-bold text-red-900">Tom Yum Soup</div>
+            <div class="text-gray-700">€8.90</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Green Curry">
+          <div>
+            <div class="font-bold text-red-900">Green Curry</div>
+            <div class="text-gray-700">€13.00</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Red Curry">
+          <div>
+            <div class="font-bold text-red-900">Red Curry</div>
+            <div class="text-gray-700">€13.00</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1429554429301-01bcd64c6eab?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Massaman Curry">
+          <div>
+            <div class="font-bold text-red-900">Massaman Curry</div>
+            <div class="text-gray-700">€14.00</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Papaya Salad">
+          <div>
+            <div class="font-bold text-red-900">Papaya Salad</div>
+            <div class="text-gray-700">€7.50</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Spring Rolls">
+          <div>
+            <div class="font-bold text-red-900">Spring Rolls</div>
+            <div class="text-gray-700">€5.00</div>
+          </div>
+        </div>
+        <div class="flex items-center bg-red-50 p-4 rounded-lg shadow">
+          <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=facearea&w=96&h=96&q=80" class="w-16 h-16 rounded-full object-cover mr-4" alt="Sticky Rice with Mango">
+          <div>
+            <div class="font-bold text-red-900">Sticky Rice with Mango</div>
+            <div class="text-gray-700">€6.50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-red-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-extrabold text-center text-red-700 mb-12">About Us</h2>
+      <div class="flex flex-col md:flex-row gap-8 items-center mb-16">
+        <div class="md:w-1/2 w-full">
+          <h3 class="text-2xl font-bold text-red-700 mb-4">Our Story</h3>
+          <p class="text-gray-800 mb-2">
+            Red Curry House was born from a passion for sharing authentic Thai flavors right here in Nuremberg. Our chefs use fresh, locally sourced ingredients and secret family recipes passed down through generations. With every dish, we invite you to discover the vibrant taste and warm spirit of Thailand. Enjoy unforgettable moments with us—where every guest is family!
+          </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=340&q=80" alt="Our restaurant" class="md:w-[340px] w-full max-h-[220px] rounded-xl shadow-lg object-cover object-center">
+      </div>
+
+      <!-- Customer Satisfaction Score and Reviews -->
+      <div class="mb-16">
+        <div class="flex flex-col items-center mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-1">Customer Satisfaction Score</h3>
+          <div class="flex items-center gap-2 text-2xl font-bold text-yellow-500 mb-1">
+            <span>4.7/5</span>
+            <i class="fab fa-google text-red-700 text-xl"></i>
+          </div>
+          <div class="text-gray-700 text-base">on Google Review</div>
+        </div>
+        <div class="max-w-3xl mx-auto">
+          <h3 class="text-2xl font-bold text-center text-red-700 mb-6">What Our Customers Say</h3>
+          <div class="relative">
+            <div id="carouselItems" class="carousel">
+              <div class="flex items-center bg-white rounded-lg shadow p-6 mb-2" id="review0">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-16 h-16 rounded-full mr-5" alt="Anna">
+                <div>
+                  <div class="font-bold text-lg text-red-900">Anna S.</div>
+                  <div class="text-gray-700">“Absolutely delicious! The best Pad Thai I’ve ever had. Friendly staff and cozy atmosphere.”</div>
+                </div>
+              </div>
+              <div class="hidden flex items-center bg-white rounded-lg shadow p-6 mb-2" id="review1">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-16 h-16 rounded-full mr-5" alt="Lukas">
+                <div>
+                  <div class="font-bold text-lg text-red-900">Lukas T.</div>
+                  <div class="text-gray-700">“Authentic flavors and fresh ingredients. The green curry is a must-try!”</div>
+                </div>
+              </div>
+              <div class="hidden flex items-center bg-white rounded-lg shadow p-6 mb-2" id="review2">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-16 h-16 rounded-full mr-5" alt="Maria">
+                <div>
+                  <div class="font-bold text-lg text-red-900">Maria D.</div>
+                  <div class="text-gray-700">“We love coming here as a family. The staff always makes us feel at home.”</div>
+                </div>
+              </div>
+              <div class="hidden flex items-center bg-white rounded-lg shadow p-6 mb-2" id="review3">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" class="w-16 h-16 rounded-full mr-5" alt="Jonas">
+                <div>
+                  <div class="font-bold text-lg text-red-900">Jonas P.</div>
+                  <div class="text-gray-700">“Great vegetarian options and beautiful presentation. Highly recommended!”</div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center items-center gap-2 mt-2">
+              <button onclick="changeReview(-1)" class="p-2 text-red-700 hover:bg-red-100 rounded-full"><i class="fas fa-chevron-left"></i></button>
+              <span id="carouselDots" class="space-x-2">
+                <span class="inline-block w-3 h-3 bg-red-700 rounded-full"></span>
+                <span class="inline-block w-3 h-3 bg-red-300 rounded-full"></span>
+                <span class="inline-block w-3 h-3 bg-red-300 rounded-full"></span>
+                <span class="inline-block w-3 h-3 bg-red-300 rounded-full"></span>
+              </span>
+              <button onclick="changeReview(1)" class="p-2 text-red-700 hover:bg-red-100 rounded-full"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Subsection (smaller images) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold text-center text-red-700 mb-6">Gallery</h3>
+        <div class="grid grid-cols-3 grid-rows-3 gap-2">
+          <div class="col-span-1 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Gallery 1" class="aspect-square rounded-xl shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-1 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Gallery 2" class="aspect-square rounded-lg shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-1 row-span-2 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Gallery 3" class="aspect-square rounded-2xl shadow h-44 sm:h-56" />
+          </div>
+          <div class="col-span-2 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1429554429301-01bcd64c6eab?auto=format&fit=crop&w=400&q=80" alt="Gallery 4" class="aspect-square rounded-lg shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-1 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Gallery 5" class="aspect-square rounded-xl shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-1 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Gallery 6" class="aspect-square rounded-lg shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-1 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=80" alt="Gallery 7" class="aspect-square rounded-xl shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-2 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80" alt="Gallery 8" class="aspect-square rounded-2xl shadow h-20 sm:h-28" />
+          </div>
+          <div class="col-span-1 row-span-1 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Gallery 9" class="aspect-square rounded-lg shadow h-20 sm:h-28" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit Us Section and Footer (unchanged) -->
+  <section id="visit" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-red-700 mb-8">Visit Us</h2>
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <div class="w-full h-64 rounded-lg overflow-hidden shadow mb-4">
+            <iframe
+              width="100%"
+              height="100%"
+              frameborder="0"
+              style="border:0"
+              class="w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.269256434287!2d11.073457315651034!3d49.45203087934751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479fef5d6a2b0e41%3A0xb3d0b6c0fafc3d87!2sNuremberg!5e0!3m2!1sen!2sde!4v1683889403931!5m2!1sen!2sde" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <div class="text-gray-800 text-lg font-semibold">123 Thai Street, Nuremberg, Germany</div>
+        </div>
+        <div>
+          <div class="mb-6">
+            <h3 class="font-bold text-red-700 mb-2 text-lg">Opening Times</h3>
+            <ul class="text-gray-700">
+              <li>Monday - Friday: 11:30 am – 10:00 pm</li>
+              <li>Saturday: 12:00 pm – 11:00 pm</li>
+              <li>Sunday: 12:00 pm – 9:00 pm</li>
+            </ul>
+          </div>
+          <div class="mb-6">
+            <h3 class="font-bold text-red-700 mb-2 text-lg">Contact</h3>
+            <div class="flex items-center mb-1">
+              <i class="fas fa-phone-alt text-red-700 mr-2"></i>
+              <span>+49 911 1234567</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <i class="fas fa-envelope text-red-700 mr-2"></i>
+              <span>hello@redcurryhouse.de</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-red-700 mb-2 text-lg">Follow Us</h3>
+            <div class="flex items-center space-x-4">
+              <a href="#" class="text-red-700 hover:text-red-900 text-2xl"><i class="fab fa-facebook-square"></i></a>
+              <a href="#" class="text-red-700 hover:text-red-900 text-2xl"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-red-700 text-white py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center">
+      <span>&copy; 2024 Red Curry House · Nuremberg</span>
+      <span class="mt-3 md:mt-0">Made with ❤️ for Thai Food Lovers</span>
+    </div>
+  </footer>
+  <script>
+    // Mobile Hamburger Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Hide mobile nav on link click
+    Array.from(mobileNav.querySelectorAll('a')).forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+      });
+    });
+
+    // Carousel
+    let currentReview = 0;
+    const reviews = [
+      document.getElementById('review0'),
+      document.getElementById('review1'),
+      document.getElementById('review2'),
+      document.getElementById('review3'),
+    ];
+    const dots = document.getElementById('carouselDots').children;
+    function showReview(idx) {
+      reviews.forEach((el,i) => {
+        el.classList.toggle('hidden', i !== idx);
+        dots[i].classList.toggle('bg-red-700', i === idx);
+        dots[i].classList.toggle('bg-red-300', i !== idx);
+      });
+    }
+    function changeReview(dir) {
+      currentReview = (currentReview + dir + reviews.length) % reviews.length;
+      showReview(currentReview);
+    }
+    showReview(currentReview);
+    setInterval(() => { changeReview(1); }, 8000);
+  </script>
+</body>
+</html>
